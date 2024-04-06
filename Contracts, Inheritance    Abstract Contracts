@@ -1,0 +1,63 @@
+Contracts:
+Code:
+//SPDX-License-Identifier: MIT
+pragma solidity 0.8.24;
+contract Test{
+    function TakeLoan(uint256) external payable {
+        GiveLoan loan = new GiveLoan (350);
+    }
+}
+contract GiveLoan{
+    uint public money;
+    constructor (uint256 _amt) public {
+        money=_amt;
+    }
+}
+
+
+Inheritance 
+1) Single Inheritance in solidity.
+Code:
+//SPDX-License-Identifier:GPL-3.0
+pragma solidity 0.8.24;
+contract Parent{
+    uint internal sum;
+    function setVal() external{
+        uint a=50;
+        uint b=20;
+        uint c=20;
+        sum = a+b+c;
+    }
+}
+contract child is Parent{
+    function getVal() external view returns(uint){
+        return sum;
+    }
+}
+contract caller{
+    child cc = new child();
+    function Inher() public returns (uint)
+    {
+        cc.setVal();
+        return cc.getVal();
+    }
+}
+
+
+
+
+Abstract Class in solidity
+//SPDX-License-Identifier:GPL-3.0
+pragma solidity ^0.5.17;
+contract A {
+    function getValue() public view returns (uint256);
+}
+contract B is A {
+    function getValue() public view returns (uint256)
+    {
+        uint256 x = 10;
+        uint256 y = 20;
+        uint256 result = x*y;
+        return result;
+    }
+}
