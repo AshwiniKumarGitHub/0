@@ -1,0 +1,29 @@
+Pure Functions:
+Code:
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.24;
+contract Sol{
+    function testAddMod() public pure returns (uint) {
+        return addmod(4,5,3);
+    }
+    function testMulMod() public pure returns (uint) {
+        return mulmod(4,5,3);
+    }
+}
+
+
+
+Mathematical Functions:
+Code:
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.24;
+contract PrimeNumber {
+    function isPrime(uint256 n) public pure returns (string memory) {     
+        for (uint256 i = 2; i < n; i++) {
+            if (n % i == 0) {  
+                return "Not a prime";
+            }
+        }   
+        return "prime";
+    }
+}
