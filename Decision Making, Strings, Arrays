@@ -1,1 +1,49 @@
+(4)	Decision Making
+CODE:
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+cntract Decision_Making{
+    uint256 public num;
+    function setNumber(uint256 _num) public {
+        num = _num;
+    }
+    function check() public view returns (string memory)  {
+         if(num % 2 == 0) {
+            return string("The number entered is even.");
+        }
+            return string(abi.encodePacked("The number entered is odd."));
+    }
+}
+
+
+5) String
+CODE:
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.24;
+contract Hello{
+    string public greet;
+    constructor(){
+        greet="Hello, MScIT";
+    }
+    function setGreet(string memory _newgreet) public{
+        greet=_newgreet;
+    }
+}
+
+
+Array:
+Code
+pragma solidity ^0.8.0;
+
+contract SimpleArrayExample {
+    uint[] public numbers;
+
+    function addNumber(uint _number) public {
+        numbers.push(_number);
+    }
+
+    function getNumber(uint _index) public view returns (uint) {
+        return numbers[_index];
+    }
+}
 
