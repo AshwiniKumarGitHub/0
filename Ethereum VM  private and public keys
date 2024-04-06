@@ -1,0 +1,31 @@
+Q1)
+pragma solidity ^0.8.0;
+contract HelloWorld {
+    string public greeting;
+    constructor() {
+        greeting = "Hello, world!";
+    }
+    function setGreeting(string memory _greeting) public {
+        greeting = _greeting;
+    }
+}
+
+
+
+
+Q2)
+from Crypto.PublicKey import RSA
+import time
+st=time.time()
+key=RSA.generate(1024)
+#PEM encoding string
+p_key=key.public_key().export_key("PEM")
+#public and private key are stored in PEM format
+priv_key=key.export_key("PEM")
+print("Pooja Anchewar")
+print(p_key)
+print(priv_key)
+et=time.time()
+en=et-st
+print(en)
+
